@@ -1,2 +1,3 @@
 # Login_node_JWT
-Aplicativo de inicio rapido login com Node + express + postgres + typeorm
+A proposta desde repositório é ser um inicio rápido para aplicativo de login usando: Node, express, TypeoRM, postgres
+
