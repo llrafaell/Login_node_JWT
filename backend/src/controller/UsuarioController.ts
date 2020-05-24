@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
-import { connection } from "../connection/Connection";
+import { ConnectionHelper } from "../util/ConnectionHelper";
 import Usuario from "../entity/Usuario";
-class Controller {
+class UsuarioController {
     constructor() { }
     public getAllUsuario(req: Request, res: Response) {
-        connection
+        ConnectionHelper
             .then(async connection => {
                 const usuarios: Usuario[] = await connection.manager.find(Usuario);
                 res.json(usuarios);
@@ -15,7 +15,7 @@ class Controller {
             });
     }
     public addUsuario(req: Request, res: Response) {
-        connection
+        ConnectionHelper
             .then(async connection => {
                 let requestUsuario = req.body;
                 let usuario = new Usuario();
@@ -30,7 +30,7 @@ class Controller {
             });
     }
     public updateUsuario(req: Request, res: Response) {
-        connection
+        ConnectionHelper
             .then(async connection => {
                 let usuario = await connection.manager.findOne(Usuario, req.params.usuarioId);
                 let requestUsuario = req.body;
@@ -46,7 +46,7 @@ class Controller {
             });
     }
     public getSuperHeroById(req: Request, res: Response) {
-        connection
+        ConnectionHelper
             .then(async connection => {
                 let usuario = await connection.manager.findOne(Usuario, req.params.usuarioId);
                 res.json(usuario)
@@ -58,7 +58,7 @@ class Controller {
     }
     public deleteUsuario(req: Request, res: Response) {
 
-        connection
+        ConnectionHelper
             .then(async connection => {
                 let usuario = await connection.manager.findOne(Usuario, req.params.usuarioId);
                 // delete our super-hero
@@ -71,4 +71,4 @@ class Controller {
             });
     }
 }
-export { Controller }
+export { UsuarioController }

@@ -1,6 +1,6 @@
 import { createConnection } from "typeorm";
 import Usuario from "../entity/Usuario";
-export const connection = createConnection({
+export const ConnectionHelper = createConnection({
     type: "postgres",
     host: "localhost",
     port: 5433, // default port of postgres
