@@ -57,15 +57,16 @@ class Controller {
             });
     }
     public deleteUsuario(req: Request, res: Response) {
+
         connection
             .then(async connection => {
                 let usuario = await connection.manager.findOne(Usuario, req.params.usuarioId);
                 // delete our super-hero
-                //await connection.manager.remove(Usuario, { id: req.params.usuarioId });
+                await connection.manager.delete(Usuario, { id: req.params.usuarioId });
                 res.json({ message: "Successfully Removed." })
             })
             .catch(error => {
-                console.error("Error ", error);
+                console.info("Error ", error);
                 res.json(error);
             });
     }
