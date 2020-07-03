@@ -1,6 +1,7 @@
 # Criado uma aplicação REST com autenticação em JWT usando: Node, express, TypeoRM, postgres
 
 
+
 ## Porque TypeORM?
 
 O TypeORM é um módulo avançado de gerenciamento de relações de objeto que é executado no Node.js. Como o nome indica, o TypeORM deve ser usado com o TypeScript. Neste artigo, aprenderemos a usar o TypeORM para configurar objetos Entity para armazenar dados em um banco de dados, como usar uma instância CustomRepository para manipular uma tabela de banco de dados e usar Relações entre instâncias de Entidade para simular junções de banco de dados.
