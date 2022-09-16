@@ -11,22 +11,19 @@ Nesse projeto usaremos Postgres, mas você pode altera para qualquer outro.
 
 
 ## Vamos Começar
-
 TypeORM tem seu próprio CLI tool que cria um projeto com o minimo necessário, para usar isso prescisamos apenas:
-
     npm install -g typeorm
 
 Agora iniciar nossa aplicação:
-
     typeorm init --name jwt-typeorm --database postgres --express
 
 Ele criará um exemplo de aplicativo expresso já no TypeScript com TypeORM e body-parser. Vamos instalar essas dependências comh:
-
     npm install
 
 Agora, vamos instalar algumas dependências adicionais
-
     npm install -s helmet cors jsonwebtoken bcryptjs class-validator ts-node-dev
+
+
 
 Depois disso, teremos as seguintes dependências
 
